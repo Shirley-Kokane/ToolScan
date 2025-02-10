@@ -2,7 +2,7 @@
 ## Introduction
 
 ToolScan is a comprehensive benchmark designed to help evaluate common error patterns identified in large language models (LLMs) during tool use tasks.
- 1. **Holistic Dataset**: ToolScan incorporates 9 distinct tasks to comprehensively understand the generalist ability of LLM agents, which is built upon LLM's extensive knowledge base and exceptional scenario comprehension.
+ 1. **Holistic Dataset**: ToolScan incorporates 10 distinct environments and 30 different tasks to comprehensively understand the generalist ability of LLM agents, which is built upon LLM's extensive knowledge base and exceptional scenario comprehension.
  2. **Multi-round Intercation**: ToolScan provides multi-round interaction between agents and environment, which is necessary to reflect the evolutionary nature of human intelligence, which continuously receives information and adapts towards the environment.
  3. **Error Quantification Platform**: Recognizing the brittleness of tool calls, where slight changes to arguments, missing arguments, or incorrect calls can lead to drastically different and incorrect results, ToolScan establishes a robust error quantification platform. This platform is crucial for identifying and catching output errors effectively.
 
