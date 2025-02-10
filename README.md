@@ -158,4 +158,3 @@ In ToolScan, we have pre-supported the following 8 open-source models, by defaul
 > Please refer to `toolscan/configs/main_results_all_tasks.yaml` for more details about these models.
 
 ```
-
