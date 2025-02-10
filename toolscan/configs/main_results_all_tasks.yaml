@@ -1,0 +1,162 @@
+run:
+  max_num_steps: 10
+  project_name: eval-test
+  baseline_dir: data/baseline_results
+  log_path: ${PROJECT_PATH}/results/test
+# only provide example run_config here, please specify with arguments when running
+
+agent:
+  name: VanillaAgent
+  memory_size: 100
+  need_goal: True
+  init_prompt_path: ${PROJECT_PATH}/toolscan/prompts/
+
+llm:
+  gpt-3.5-turbo-16k:
+      name: gpt
+      engine: gpt-3.5-turbo-16k
+      context_length: 16384 # 4096
+      max_tokens: 500
+      use_azure: False
+      temperature: 0.
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: "\n"
+      use_parser: False
+  text-davinci-003:
+      name: gpt
+      engine: text-davinci-003
+      max_tokens: 200
+      context_length: 4096
+      use_azure: False
+      temperature: 0.
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: "\n"
+      use_parser: False
+  gpt-4:
+      name: gpt
+      engine: gpt-4
+      context_length: 8192
+      use_azure: False
+      temperature: 0.
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: "\n"
+      use_parser: False
+  gpt-4o:
+      name: gpt
+      engine: gpt-4o
+      context_length: 8192
+      use_azure: False
+      temperature: 0.
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: "\n"
+      use_parser: False
+  deepseek-67b:   # for opensource models, llm name should be either vllm/hg based on the vllm/huggingface inference architecture
+      name: vllm
+      engine: deepseek-ai/deepseek-llm-67b-chat
+      max_tokens: 200
+      temperature: 0
+      top_p: 1
+      stop:
+      context_length: 4096
+      dtype: float16
+      ngpu: 4
+      use_parser: True
+  deepseek-7b:   # for opensource models, llm name should be either vllm/hg based on the vllm/huggingface inference architecture
+      name: vllm
+      engine: deepseek-ai/deepseek-llm-7b-chat
+      max_tokens: 100
+      temperature: 0
+      top_p: 1
+      stop:
+      context_length: 5096
+      dtype: float16
+      ngpu: 4
+      use_parser: True
+  deepseek-1.3b:   # for opensource models, llm name should be either vllm/hg based on the vllm/huggingface inference architecture
+      name: vllm
+      engine: deepseek-ai/deepseek-coder-1.3b-instruct
+      max_tokens: 100
+      temperature: 0
+      top_p: 1
+      stop:
+      context_length: 16384
+      dtype: float16
+      ngpu: 4
+      use_parser: True
+  codellama-13b:
+      name: vllm
+      engine: codellama/CodeLlama-13b-Instruct-hf
+      max_tokens: 100
+      temperature: 0
+      top_p: 1
+      stop:
+      context_length: 16384
+      dtype: float32
+      ngpu: 4
+      use_parser: True
+  codellama-34b:
+      name: vllm
+      engine: codellama/CodeLlama-34b-Instruct-hf
+      max_tokens: 200
+      temperature: 0
+      top_p: 1
+      stop:
+      context_length: 16384
+      dtype: float16
+      ngpu: 8
+      use_parser: True
+  llama3-8b:
+      name: vllm
+      engine: meta-llama/Meta-Llama-3-8B-Instruct
+      max_tokens: 100
+      temperature: 0.
+      top_p: 1
+      stop:
+      context_length: 16384
+      dtype: float16
+      ngpu: 8
+      use_parser: True
+
+  vicuna-13b-16k:
+      name: vllm
+      engine: lmsys/vicuna-13b-v1.5-16k
+      max_tokens: 100
+      temperature: 0.
+      top_p: 1
+      stop:
+      context_length: 16384
+      dtype: float16
+      ngpu: 2
+      use_parser: True
+
+  mistral-7b:
+      name: vllm
+      engine:  "mistralai/Mistral-7B-v0.1"
+      max_tokens: 500
+      temperature: 0
+      top_p: 1
+      stop: "</s>"
+      context_length: 8192
+      dtype: float32
+      ngpu: 4
+      use_parser: True
+
+  mixtral_8x7b:
+      name: vllm
+      engine:  "mixtral_8x7b"
+      max_tokens: 500
+      temperature: 0
+      top_p: 1
+      stop: "</s>"
+      context_length: 8192
+      dtype: float32
+      ngpu: 4
+      use_parser: True

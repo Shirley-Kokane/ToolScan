@@ -1,0 +1,16 @@
+openai==0.28.1
+gymnasium
+gym==0.24.0
+numpy==1.22.4
+pandas==1.4.2
+torch==2.1.2
+PyYAML==6.0
+python-dotenv
+types-tqdm
+tiktoken
+tokenizers==0.15.2
+vllm==0.2.7
+anthropic==0.6.0
+jsonlines
+requests==2.27.1
+pytest

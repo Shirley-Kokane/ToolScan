@@ -1,0 +1,6 @@
+{
+    "instruction": "We detail name, description, input(parameters) and output(returns) of each action as follows:",
+    "examples": [],
+    "system_msg": "You can use actions to help people solve problems.\n",
+    "final_instruction": "If you are finished, you will call 'finish' action. \nPlease refer to the format of examples below to solve the requested goal. Your response must be in the format of 'Action: [your action] with Action Input: [your action input]'"
+  }
