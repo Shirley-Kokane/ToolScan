@@ -141,7 +141,7 @@ Parameters:
   - `gpt-4`
   - `text-davinci-003`
   - `claude2`
-- `log_path`: Path to save logs, as specified [here](#check-and-analyze-results).
+- `log_path`: Path to save logs.
 
 
 ### Running Open-source Models
