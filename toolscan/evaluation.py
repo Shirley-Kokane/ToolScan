@@ -43,7 +43,7 @@ def load_config_details(PROJECT_PATH):
     }
 
     run_config = {
-        "max_num_steps": 5,
+        "max_num_steps": 10,
         "project_name": "eval-test",
         "feedback_flag": True,
         "log_path": os.path.join(PROJECT_PATH, "results/test"),
